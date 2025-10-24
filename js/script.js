@@ -1,7 +1,7 @@
 // Welcome Speech Function - Otomatis dijalankan saat halaman dimuat
 function welcomeSpeech() {
     // Cek apakah nama sudah tersimpan di session
-    let userName = sessionStorage.getItem('userName');
+    let userName = localStorage.getItem('userName');
     
     // Jika belum ada nama, tanya ke user
     if (!userName) {
@@ -9,11 +9,11 @@ function welcomeSpeech() {
         
         // Jika user memasukkan nama, simpan ke session
         if (userName && userName.trim() !== "") {
-            sessionStorage.setItem('userName', userName);
+            localStorage.setItem('userName', userName);
         } else {
             // Jika user cancel atau kosong, set default
             userName = "Guest";
-            sessionStorage.setItem('userName', userName);
+            localStorage.setItem('userName', userName);
         }
     }
     
