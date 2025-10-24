@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
 
-    <link rel="stylesheet" href="css\style.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -16,79 +16,95 @@
 
     <!--Header Content-->
     <header class="main-header p-[5px] relative">
-        <!--Logo Website-->
+        <!--Website Icon-->
+        <div class="logo-welcome-container">
         <div class="main-logo"></div>
+        <p id="welcome-text" class="welcome-text"></p>
+    </div>
         
-        <!--Instagram link-->
-        <a href="https://instagram.com/fall.icaruss" target="_blank" class="https://www.instagram.com/fall.icaruss?igsh=d3h6aTBiMTk5dWxr absolute top-5 right-5 text-3xl text-pink-600 hover:text-pink-700 transition-all hover:scale-110">
+        <!--Instagram link Icon-->
+        <a href="https://instagram.com/einaryve" target="_blank" class="https://www.instagram.com/einaryve?igsh=MXZubnJmaXpzb3pz absolute top-5 right-10 text-3xl text-pink-600 hover:text-pink-700 transition-all hover:scale-110">
             <i class="fab fa-instagram"></i>
         </a>
 
-        <!--Github Link-->
-        <a href="https://github.com/einar7721ux" target="_blank" class=" absolute top-5 right-15 text-3xl text-gray-800 hover:text-gray-600 transition-all hover:scale-110">
+        <!--Github Link Icon-->
+        <a href="https://github.com/einar7721ux" target="_blank" class=" absolute top-5 right-22 text-3xl text-gray-800 hover:text-gray-600 transition-all hover:scale-110">
             <i class="fab fa-github"></i>
         </a>
 
     <!--Navigation-->
-        <nav class="flex gap-6">
-            <a href="#home-section">Home</a>
-            <a href="#profile-section">Our Profile</a>
-            <a href="#portofolio-section">Portofolio</a>
-            <a href="#message-section">Message Us</a>
+        <nav class="flex gap-10">
+            <a href="#home-section" class="hover:text-gray-600 transition-all hover:scale-110">Home</a>
+            <a href="#profile-section" class="hover:text-gray-600 transition-all hover:scale-110">My Profile</a>
+            <a href="#portofolio-section" class="hover:text-gray-600 transition-all hover:scale-110">Portofolio</a>
+            <a href="#message-section"  class="hover:text-gray-600 transition-all hover:scale-110">Message Us</a>
         </nav>
     </header>
 
-    <hr/>
+</br>
 
     <!--Main Content-->
     <main>
         <!--Home-->
         <section id="home-section" class="hero-section p-3 min-h-[500px]">
-            <h1 class="text-3x1 font-bold mb-4"><span id="greet-name"></span>WELCOME TO MY PORTOFOLIO</h1>
-
-<hr/>
+            <h1 style="position: relative; left: 900px;" class="text-3x1 font-bold mb-10"><span id="greet-name"></span>MY PROJECT</h1>
 
 <!--Portofolio-->
 <section id="portofolio-section" class="portofolio-section p-4 min-h-[500px]">
     
-    <div class="projects-container">
-        <!-- Icon Github -->
+<div class="projects-container">
+        <!--Project-->
+        <div class="project-card-wrapper">
         <a href="https://einar7721ux.github.io/CodingCamp-13Oct2025-Einar/" target="_blank" class="project-card">
             <div class="project-image">
-                <img src="https://imgur.com/MRl7lKf" alt="CodingCamp Project">
-                <div class="overlay">
+                <img src="images/todolist.png" alt="To-do List Project">
                 <!--Link github-->    
                 <i class="fas fa-external-link-alt"></i>
-                </div>
             </div>
-        </section>
+</div>
+        </a>
+</section>
 
         <hr/>
 
         <!--Our Proofile-->
         <section id="profile-section" class="profile-section p-4 min-h-[500px]">
-            <h2 class="text-2x1 font-bold mb-4">Our Profile</h2>
-            <p class="text-lg"> Details about my background, skills, and experience.</p>
+            <div class="profile-section">
+        
+            <h2 class="text-5x1 font-bold mb-4">My Profile</h2>
+            <img src="images/rigbycat.png" alt="Rigby Cat">
+            <p class="text-cat">Hello everyone, I'm Einar. </br>
+                                I'm currently in my third semester of college. </br>
+                                I live in Bekasi. </br>
+                                Right now, I'm studying software engineering.</br>
+                                And right now, I'm focusing on deepening my knowledge in it.
+
+            </p>
+            </div>
+            </div>
         </section>
 
         <hr/>
 
         <section id="message-section" class="message-section p-4 min-h-[500px]">
-            <h2 class="text-2x1 font-bold mb-4"> Message Us</h2>
-            <p class="text-lg"> Feel free to reach out for collaborations or inquiries</p>
+            <h2 class="text-2x1 font-bold mb-4">Message Us</h2>
+            <p class="text-lg">Feel free to reach out for collaborations or inquiries</p>
 
             <form>
+                <!--Label for Name input-->
                 <label for="name" class="block mb-2">Name:</label>
                 <input type="text" id="name-input" name="name" style="border-radius: 12px;" class="border p-2 mb-4 w-full" required>
 
+                <!--Label for email input-->
                 <label for="email" class="block mb-2">Email:</label>
                 <input type="text" id="email-input" name="email" style="border-radius: 12px;" class="border p-2 mb-4 w-full" required>
                 
+                <!--Label for message input-->
                 <label for="message" class="block mb-2">Message:</label>
                 <textarea id="message-input" name="message" style="border-radius: 12px;" class="border p-2 mb-4 w-full" rows="4" required></textarea>
             </form>
 
-            <button onclick="validateForm();" style="border-radius: 8px;" class="bg-blue-500 text-white p-2 rounded">Send Message</button>
+            <button onclick="validateForm();" style="border-radius: 8px;" class="bg-blue-500 text-white p-2 rounded hover:text-gray-600 transition-all hover:scale-110">Send Message</button>
         </section>
     </main>
 
@@ -99,7 +115,8 @@
         </div>
     </footer>
 
-    <script src="js\script.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

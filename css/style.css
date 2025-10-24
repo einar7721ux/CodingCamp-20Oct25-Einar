@@ -1,4 +1,7 @@
 .main-logo {
+    position: relative;
+    left: 11px;
+    top: 3px;
     height: 75px;
     width: 75px;
     background-color: rgb(0, 0, 0);
@@ -7,38 +10,153 @@
     background-size: cover;
 }
 
+
+         
+/* ===== OUR PROFILE SECTION ===== */
+
+.profile-section {
+    display: flex;
+    gap: 1rem;
+    align-items: top;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Size and Distance Text*/
+.profile-section p {
+    position: relative;
+    right: 510px;
+    top: 32px;
+    font-size: 25px;
+    color: white;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.profile-section h2 {
+    position: relative;
+    left: 500px;
+    bottom: 60px;
+    white-space: nowrap;
+    color: white;
+}
+
+/* image size */
+.profile-section img {
+    position: relative;
+    right: 510px;
+    top: 35px;
+    width: 300px;           
+    height: 250px;         
+    object-fit: cover;      
+    border-radius: 15px;  
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .profile-section img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+}
+
+
+
 .main-header {   
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    
 }
 
-* Portfolio Section Styling */
-.portofolio-section {
-    background: rgba(0, 31, 63, 0.5);
-    border-radius: 12px;
-    margin: 20px 0;
+main {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    background: linear-gradient(135deg, #000000 0%, #001f3f 50%, #0074D9 100%);
+}
+
+.logo-welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav {
+    position: absolute;
+    left: 120px;
+    right: auto;
+    top: 35px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
+.welcome-text {
+    position: relative;
+    left: 11px;
+    top: 12px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* ===== PORTFOLIO SECTION STYLING ===== */
+
+.hero-section {
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* limiting clickable area */
+.project-card-wrapper {
+    width: 100%;
+    max-width: 650px;
+}
+
+.project-card {
+    display: block;
+    border-radius: 16px;
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
-    display: block;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(5, 217, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(30, 123, 210, 0.183);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 48px rgba(29, 81, 215, 0.307);
 }
 
 .project-image {
     position: relative;
-    overflow: hidden;
-    height: 250px;
-    background: #f0f0f0;
+    width: 100%;
+    height: 400px;
 }
 
 .project-image img {
@@ -52,44 +170,29 @@
     transform: scale(1.1);
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom:0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-card:hover .overlay {
+.project-card:hover .project-overlay {
     opacity: 1;
 }
 
-.overlay i {
-    color: white;
+.project-overlay i {
     font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-main {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-}
 
-body {
-    background: linear-gradient(135deg, #000000 0%, #001f3f 50%, #0074D9 100%);
-}
 
-nav {
-    position: absolute;
-    left: 120px;
-    right: auto;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 1rem;
+    }
+    
+    .project-card-wrapper {
+        max-width: 100%;
+    }
+    
+    .project-image {
+        height: 220px;
+    }
 }
-
 
